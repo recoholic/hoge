@@ -1,3 +1,6 @@
+<?php
+App::uses('AppController', 'Controller');
+
 // File: /app/Controller/PostsController.php
 class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
@@ -18,3 +21,5 @@ class PostsController extends AppController {
         $this->set('post', $post);
     }
 }
+
+?>
