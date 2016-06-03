@@ -73,4 +73,14 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 	}
+
+	public function index() {
+	}
+
+	public function view() {
+	}
+
+	public function add() {
+	}
+
 }
