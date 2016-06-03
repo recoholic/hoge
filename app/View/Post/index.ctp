@@ -14,16 +14,16 @@
         <th>Created</th>
     </tr>
 
-    <!-- ここから、$posts配列をループして、投稿記事の情報を表示 -->
+    <!-- ここから、$post配列をループして、投稿記事の情報を表示 -->
 
-    <?php foreach ($posts as $post): ?>
+    <?php foreach ($post as $post_element): ?>
     <tr>
-        <td><?php echo $post['Post']['id']; ?></td>
+        <td><?php echo $post_element['Post']['id']; ?></td>
         <td>
-            <?php echo $this->Html->link($post['Post']['title'],
-array('controller' => 'post', 'action' => 'view', $post['Post']['id'])); ?>
+            <?php echo $this->Html->link(mb_convert_encoding ($post_element['Post']['title'],"UTF-8","auto"),
+array('controller' => 'post', 'action' => 'view', $post_element['Post']['id'])); ?>
         </td>
-        <td><?php echo $post['Post']['created']; ?></td>
+        <td><?php echo $post_element['Post']['created']; ?></td>
     </tr>
     <?php endforeach; ?>
     <?php unset($post); ?>
