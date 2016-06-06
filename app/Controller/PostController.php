@@ -3,14 +3,13 @@ App::uses('AppController', 'Controller');
 
 // File: /app/Controller/PostsController.php
 class PostController extends AppController {
-    public $helpers = array('Html', 'Form');
-    //public $components = array('Flash');
+    public $helpers = array('Html', 'Form', 'Flash');
+    public $components = array('Flash');
 
     public function index() {
         $this->set('post', $this->Post->find('all'));
     }
-    /*
-    public function view($id) {
+    public function view($id = null) {
         if (!$id) {
             throw new NotFoundException(__('Invalid post'));
         }
@@ -32,7 +31,6 @@ class PostController extends AppController {
             $this->Flash->error(__('Unable to add your post.'));
         }
     }
-    */
 }
 
 ?>
