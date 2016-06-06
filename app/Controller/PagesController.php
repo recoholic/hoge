@@ -83,4 +83,7 @@ class PagesController extends AppController {
 	public function add() {
 	}
 
+	public function edit() {
+	}
+
 }
